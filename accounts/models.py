@@ -16,13 +16,13 @@ class CustomUser(AbstractUser):
 
 
 class AdminHOD(models.Model):
-    admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name="admin")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
 
 class Staff(models.Model):
-    admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='staff_profile')
+    admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='staff')
     profile_image = models.ImageField(upload_to='profile_pic/')
     address = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -37,7 +37,7 @@ class Student(models.Model):
         ('male', 'Male'),
         ('female', 'Female'),
     )
-    admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name="student")
     gender = models.CharField(choices=GENDER_TYPE, max_length=10, default='male')
     profile_image = models.ImageField(upload_to='profile_pic/')
     address = models.TextField()
@@ -58,18 +58,14 @@ def create_user_profile(sender, instance, created, **kwargs):
 
         if instance.user_type == 3:
             Student.objects.create(admin=instance)
-
-
+    
 @receiver(post_save, sender=CustomUser)
 def save_user_profile(sender, instance, **kwargs):
     if instance.user_type == 1:
-        instance.adminhod.save()
+        instance.admin.save()
 
     if instance.user_type == 2:
         instance.staff.save()
 
     if instance.user_type == 3:
         instance.student.save()
-
-
-
