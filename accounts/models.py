@@ -22,7 +22,7 @@ class AdminHOD(models.Model):
 
 
 class Staff(models.Model):
-    admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='staff_profile')
     profile_image = models.ImageField(upload_to='profile_pic/')
     address = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)

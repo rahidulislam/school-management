@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block page_title %}
-  Add Staff
+  Edit Subject
 {% endblock page_title %}
 
 {% block main %}
@@ -10,25 +10,23 @@
         <!-- general form elements -->
         <div class="card card-primary">
           <div class="card-header">
-            <h3 class="card-title">Add Staff</h3>
+            <h3 class="card-title">Edit Subject</h3>
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form role="form" action="{% url 'accounts:add_staff' %}" method="POST" enctype="multipart/form-data">
+          <form role="form" action="{% url 'courses:subject_edit' pk=subject.pk %}" method="POST" enctype="multipart/form-data">
               {% csrf_token %}
             <div class="card-body">
-                
+
               <div class="form-group">
                 {{ form|crispy }}
-
               </div>
 
-              
             </div>
             <!-- /.card-body -->
 
             <div class="card-footer">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Update</button>
             </div>
           </form>
         </div>

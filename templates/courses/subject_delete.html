@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block page_title %}
+  Delete Subject
+{% endblock page_title %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Delete {{ subject.subject_name }}</h3>
+                </div>
+                <div class="card-body">
+                    <form action="{% url 'courses:subject_delete' pk=subject.pk %}" method="POST">
+                        {% csrf_token %}
+                        <p>Are you sure to delete this {{ subject.subject_name }} ?</p>
+                        <button type="submit" class="btn btn-block btn-danger">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main %}

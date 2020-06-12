@@ -5,7 +5,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Subject Detail</h3>
+                <h3 class="card-title">Course Detail</h3>
 
 
               </div>
@@ -15,24 +15,17 @@
 
                   <tbody>
                   <tr>
-                        <td>Course</td>
-                        <td>{{ subject.course }}</td>
+                        <td>Course Name</td>
+                        <td>{{ course.course_name }}</td>
                     </tr>
-                    <tr>
-                        <td>Subject Name</td>
-                        <td>{{ subject.subject_name }}</td>
-                    </tr>
-                    <tr>
-                        <td>Staff</td>
-                        <td>{{ subject.staff }}</td>
-                    </tr>
+
                     <tr>
                         <td>Created</td>
-                        <td>{{ subject.created_at|date:'d-m-Y H:i' }}</td>
+                        <td>{{ course.created_at|date:'d-m-Y H:i' }}</td>
                     </tr>
                     <tr>
                         <td>Updated</td>
-                        <td>{{ subject.updated_at|date:'d-m-Y H:i' }}</td>
+                        <td>{{ course.updated_at|date:'d-m-Y H:i' }}</td>
                     </tr>
                   </tbody>
                 </table>

@@ -5,7 +5,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">All Subject</h3>
+                <h3 class="card-title">All Course</h3>
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -22,24 +22,24 @@
                 <table class="table table-head-fixed text-nowrap">
                   <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Course</th>
-                        <th>Subject Name</th>
-                        <th>Staff</th>
-                        <th>Action</th>
+                        <th>#</th>
+                        <th>Course Name</th>
+                        <th>Created At</th>
+                        <th>Updated</th>
+
 
                     </tr>
                   </thead>
                   <tbody>
-                    {% for subject in subjects %}
+                    {% for course in course_list %}
                     <tr>
                         <td>{{ forloop.counter }}</td>
-                        <td>{{ subject.course }}</td>
-                        <td>{{ subject.subject_name }}</td>
-                        <td> {{ subject.staff }}</td>
-                        <td><a href="{% url 'courses:subject_edit' pk=subject.pk %}" class="btn btn-block btn-primary">Edit</a></td>
-                        <td><a href="{% url 'courses:subject_detail' pk=subject.pk %}" class="btn btn-block btn-info">View</a></td>
-                        <td><a href="{% url 'courses:subject_delete' pk=subject.pk %}" class="btn btn-block btn-danger">Delete</a></td>
+                        <td>{{ course.course_name }}</td>
+                        <td>{{ course.created_at|date:'d-m-Y h:i' }}</td>
+                        <td> {{ course.updated_at|date:'d-m-Y h:i' }}</td>
+                        <td><a href="{% url 'courses:course_edit' pk=course.pk %}" class="btn btn-block btn-primary">Edit</a></td>
+                        <td><a href="{% url 'courses:course_detail' pk=course.pk %}" class="btn btn-block btn-info">View</a></td>
+                        <td><a href="{% url 'courses:course_delete' pk=course.pk %}" class="btn btn-block btn-danger">Delete</a></td>
                     </tr>
                     {% endfor %}
 

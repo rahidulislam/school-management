@@ -5,7 +5,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">All Subject</h3>
+                <h3 class="card-title">All Staff</h3>
 
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -22,24 +22,36 @@
                 <table class="table table-head-fixed text-nowrap">
                   <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Course</th>
-                        <th>Subject Name</th>
-                        <th>Staff</th>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Profile Image</th>
+                        <th>Last Login</th>
+                        <th>Date Joined</th>
                         <th>Action</th>
+
+
 
                     </tr>
                   </thead>
                   <tbody>
-                    {% for subject in subjects %}
+                    {% for staff in staff_list %}
                     <tr>
                         <td>{{ forloop.counter }}</td>
-                        <td>{{ subject.course }}</td>
-                        <td>{{ subject.subject_name }}</td>
-                        <td> {{ subject.staff }}</td>
-                        <td><a href="{% url 'courses:subject_edit' pk=subject.pk %}" class="btn btn-block btn-primary">Edit</a></td>
-                        <td><a href="{% url 'courses:subject_detail' pk=subject.pk %}" class="btn btn-block btn-info">View</a></td>
-                        <td><a href="{% url 'courses:subject_delete' pk=subject.pk %}" class="btn btn-block btn-danger">Delete</a></td>
+                        <td>{{ staff.admin.first_name }}</td>
+                        <td>{{ staff.admin.last_name }}</td>
+                        <td>{{ staff.admin.email }}</td>
+                        <td>
+                            {% if staff.profile_image %}
+                                <img src="{{ staff.profile_image.url }}" alt="Image" style="width: 70px; height: 72px;">
+                            {% endif %}
+                        </td>
+                        <td>{{ staff.admin.last_login }}</td>
+                        <td>{{ staff.admin.date_joined|date:'d-m-Y h:i' }}</td>
+                        <td><a href="{% url 'accounts:staff_edit' pk=staff.pk %}" class="btn btn-block btn-primary">Edit</a></td>
+                        <td><a href="" class="btn btn-block btn-info">View</a></td>
+                        <td><a href="" class="btn btn-block btn-danger">Delete</a></td>
                     </tr>
                     {% endfor %}
 
