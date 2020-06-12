@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ee2bc552-0f97-488e-a64b-d9aafb9a5748" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1d5RThq2kel7yFWUTL1eYBWQAtg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="SMS" type="Python.DjangoServer" factoryName="Django server">
+      <module name="SMS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="SMS.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <module name="SMS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee2bc552-0f97-488e-a64b-d9aafb9a5748" name="Default Changelist" comment="" />
+      <created>1591712978050</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591712978050</updated>
+      <workItem from="1591712989491" duration="25000" />
+      <workItem from="1591714061160" duration="305000" />
+      <workItem from="1591715018010" duration="100000" />
+      <workItem from="1591715376588" duration="1571000" />
+      <workItem from="1591719542463" duration="314000" />
+      <workItem from="1591746880758" duration="57000" />
+      <workItem from="1591759468547" duration="368000" />
+      <workItem from="1591760437068" duration="23000" />
+      <workItem from="1591761006665" duration="512000" />
+      <workItem from="1591761889558" duration="820000" />
+      <workItem from="1591762971869" duration="2622000" />
+      <workItem from="1591785232799" duration="4767000" />
+      <workItem from="1591793718645" duration="256000" />
+      <workItem from="1591794380036" duration="6012000" />
+      <workItem from="1591837638228" duration="4187000" />
+      <workItem from="1591867039386" duration="612000" />
+      <workItem from="1591929518202" duration="2296000" />
+      <workItem from="1591935926774" duration="689000" />
+      <workItem from="1591937551224" duration="3263000" />
+      <workItem from="1591951331711" duration="6848000" />
+      <workItem from="1591977123846" duration="2702000" />
+    </task>
+    <task id="LOCAL-00001" summary="স্টাফ তৈরীতে সমস্যা">
+      <created>1591979552235</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591979552235</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="স্টাফ তৈরীতে সমস্যা" />
+    <option name="LAST_COMMIT_MESSAGE" value="স্টাফ তৈরীতে সমস্যা" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="389" y="30" width="578" height="738" key="#SMS" timestamp="1591715780149">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="389" y="30" width="578" height="738" key="#SMS/0.30.1366.738@0.30.1366.738" timestamp="1591715780149" />
+    <state x="248" y="49" width="866" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591763952517">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="248" y="49" width="866" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1366.738@0.30.1366.738" timestamp="1591763952517" />
+    <state x="227" y="30" width="901" height="738" key="CommitChangelistDialog2" timestamp="1591979550980">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="227" y="30" width="901" height="738" key="CommitChangelistDialog2/0.30.1366.738@0.30.1366.738" timestamp="1591979550980" />
+    <state x="727" y="90" width="261" height="481" key="EnvironmentVariablesDialog" timestamp="1591761432958">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="727" y="90" width="261" height="481" key="EnvironmentVariablesDialog/0.30.1366.738@0.30.1366.738" timestamp="1591761432958" />
+    <state x="466" y="144" width="424" height="515" key="FileChooserDialogImpl" timestamp="1591716217631">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="466" y="144" width="424" height="515" key="FileChooserDialogImpl/0.30.1366.738@0.30.1366.738" timestamp="1591716217631" />
+    <state x="560" y="299" width="245" height="203" key="Github.ShareDialog" timestamp="1591719567401">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="560" y="299" width="245" height="203" key="Github.ShareDialog/0.30.1366.738@0.30.1366.738" timestamp="1591719567401" />
+    <state x="455" y="97" width="446" height="607" key="Github.UntrackedFilesDialog" timestamp="1591719581289">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="455" y="97" width="446" height="607" key="Github.UntrackedFilesDialog/0.30.1366.738@0.30.1366.738" timestamp="1591719581289" />
+    <state width="1320" height="173" key="GridCell.Tab.0.bottom" timestamp="1591978915572">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state width="1320" height="173" key="GridCell.Tab.0.bottom/0.30.1366.738@0.30.1366.738" timestamp="1591978915572" />
+    <state width="1320" height="173" key="GridCell.Tab.0.center" timestamp="1591978915572">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state width="1320" height="173" key="GridCell.Tab.0.center/0.30.1366.738@0.30.1366.738" timestamp="1591978915572" />
+    <state width="1320" height="173" key="GridCell.Tab.0.left" timestamp="1591978915571">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state width="1320" height="173" key="GridCell.Tab.0.left/0.30.1366.738@0.30.1366.738" timestamp="1591978915571" />
+    <state width="1320" height="173" key="GridCell.Tab.0.right" timestamp="1591978915572">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state width="1320" height="173" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1591978915572" />
+    <state width="1320" height="216" key="GridCell.Tab.1.bottom" timestamp="1591716962681">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state width="1320" height="216" key="GridCell.Tab.1.bottom/0.30.1366.738@0.30.1366.738" timestamp="1591716962681" />
+    <state width="1320" height="216" key="GridCell.Tab.1.center" timestamp="1591716962680">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state width="1320" height="216" key="GridCell.Tab.1.center/0.30.1366.738@0.30.1366.738" timestamp="1591716962680" />
+    <state width="1320" height="216" key="GridCell.Tab.1.left" timestamp="1591716962679">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state width="1320" height="216" key="GridCell.Tab.1.left/0.30.1366.738@0.30.1366.738" timestamp="1591716962679" />
+    <state width="1320" height="216" key="GridCell.Tab.1.right" timestamp="1591716962681">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state width="1320" height="216" key="GridCell.Tab.1.right/0.30.1366.738@0.30.1366.738" timestamp="1591716962681" />
+    <state x="187" y="34" width="992" height="733" key="SettingsEditor" timestamp="1591936611045">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="187" y="34" width="992" height="733" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1591936611045" />
+    <state x="489" y="315" width="388" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591979683197">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="489" y="315" width="388" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1366.738@0.30.1366.738" timestamp="1591979683197" />
+  </component>
+</project>
