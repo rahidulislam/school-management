@@ -6,7 +6,7 @@ from django.views.generic import TemplateView, FormView, CreateView, ListView, U
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from accounts.models import CustomUser, Staff
-from accounts.forms import AddStudentForm, StaffUpdateForm, CreateUserForm
+from accounts.forms import AddStudentForm, StaffUpdateForm, CreateUserForm, UpdateUserForm
 from courses.models import Course
 
 class Home(LoginRequiredMixin, TemplateView):
@@ -72,19 +72,6 @@ class AddStaff(LoginRequiredMixin, CreateView):
             return render(request, self.template_name, context)
 
 
-
-    def form_valid(self, form):
-        form.save()
-        messages.success(self.request, 'Successfully Staff Added', extra_tags='alert alert-success')
-        return redirect('accounts:manage_staff')
-
-
-
-
-
-
-
-
 class ManageStaff(LoginRequiredMixin, ListView):
     model = Staff
     template_name = 'accounts/manage_staff.html'
@@ -92,40 +79,12 @@ class ManageStaff(LoginRequiredMixin, ListView):
 
 
 class StaffUpdate(LoginRequiredMixin, UpdateView):
-    model = Staff
-    form_class = StaffUpdateForm
+    form_class = UpdateUserForm
     template_name = "accounts/staff_edit.html"
 
     def post(self, request, *args, **kwargs):
-        staff = get_object_or_404(Staff, pk=self.kwargs['pk'])
-        form = self.form_class(data=request.POST, files=request.FILES, instance=staff)
-
-        if form.is_valid():
-            first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name']
-            username = form.cleaned_data['username']
-            email = form.cleaned_data['email']
-            password = form.cleaned_data['password']
-            address = form.cleaned_data['address']
-            profile_image = form.cleaned_data['profile_image']
-
-            try:
-                user = CustomUser.objects.create_user(
-                    username=username,
-                    email=email,
-                    password=password,
-                    first_name=first_name,
-                    last_name=last_name,
-                    user_type=2
-                )
-                user.staff.address = address
-                user.staff.profile_image = profile_image
-                user.save()
-                print(user)
-                return redirect('accounts:manage_staff')
-
-            except:
-                return redirect('accounts:staff_edit')
+        staff_obj = get_object_or_404(CustomUser, pk=self.kwargs['pk'])
+        form = self.form_class(data=request.POST, files=request.FILES, instance=staff_obj)
 
 class AddStudent(LoginRequiredMixin, FormView):
     form_class = AddStudentForm
