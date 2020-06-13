@@ -79,12 +79,16 @@ class ManageStaff(LoginRequiredMixin, ListView):
 
 
 class StaffUpdate(LoginRequiredMixin, UpdateView):
+    model = Staff
     form_class = UpdateUserForm
     template_name = "accounts/staff_edit.html"
 
-    def post(self, request, *args, **kwargs):
-        staff_obj = get_object_or_404(CustomUser, pk=self.kwargs['pk'])
-        form = self.form_class(data=request.POST, files=request.FILES, instance=staff_obj)
+    #queryset = Staff.objects.all()
+    def get_object(self, queryset=None):
+        if queryset is None:
+            queryset = self.get_queryset()
+        return get_object_or_404(queryset, pk=self.kwargs['pk'])
+
 
 class AddStudent(LoginRequiredMixin, FormView):
     form_class = AddStudentForm

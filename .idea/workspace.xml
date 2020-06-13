@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee2bc552-0f97-488e-a64b-d9aafb9a5748" name="Default Changelist" comment="স্টাফ তৈরীতে সমস্যা">
-      <change afterPath="$PROJECT_DIR$/media/profile_pic/Screenshot_from_2020-06-06_12.18.40.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pic/Screenshot_from_2020-06-12_22-46-39.png" afterDir="false" />
+    <list default="true" id="ee2bc552-0f97-488e-a64b-d9aafb9a5748" name="Default Changelist" comment="স্টাফ আপডেট সমস্যা">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
@@ -146,7 +143,10 @@
       <workItem from="1591937551224" duration="3263000" />
       <workItem from="1591951331711" duration="6848000" />
       <workItem from="1591977123846" duration="6678000" />
-      <workItem from="1592019297904" duration="1647000" />
+      <workItem from="1592019297904" duration="2675000" />
+      <workItem from="1592023351353" duration="209000" />
+      <workItem from="1592061598788" duration="704000" />
+      <workItem from="1592084771563" duration="2037000" />
     </task>
     <task id="LOCAL-00001" summary="স্টাফ তৈরীতে সমস্যা">
       <created>1591979552235</created>
@@ -169,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591980379471</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="স্টাফ আপডেট সমস্যা">
+      <created>1592021019206</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1592021019206</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +197,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="স্টাফ তৈরীতে সমস্যা" />
-    <option name="LAST_COMMIT_MESSAGE" value="স্টাফ তৈরীতে সমস্যা" />
+    <MESSAGE value="স্টাফ আপডেট সমস্যা" />
+    <option name="LAST_COMMIT_MESSAGE" value="স্টাফ আপডেট সমস্যা" />
   </component>
   <component name="WindowStateProjectService">
     <state x="389" y="30" width="578" height="738" key="#SMS" timestamp="1591715780149">
@@ -225,22 +233,22 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="455" y="97" width="446" height="607" key="Github.UntrackedFilesDialog/0.30.1366.738@0.30.1366.738" timestamp="1591719581289" />
-    <state width="1320" height="173" key="GridCell.Tab.0.bottom" timestamp="1591985476091">
+    <state width="1320" height="173" key="GridCell.Tab.0.bottom" timestamp="1592087223958">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="173" key="GridCell.Tab.0.bottom/0.30.1366.738@0.30.1366.738" timestamp="1591985476091" />
-    <state width="1320" height="173" key="GridCell.Tab.0.center" timestamp="1591985476090">
+    <state width="1320" height="173" key="GridCell.Tab.0.bottom/0.30.1366.738@0.30.1366.738" timestamp="1592087223958" />
+    <state width="1320" height="173" key="GridCell.Tab.0.center" timestamp="1592087223957">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="173" key="GridCell.Tab.0.center/0.30.1366.738@0.30.1366.738" timestamp="1591985476090" />
-    <state width="1320" height="173" key="GridCell.Tab.0.left" timestamp="1591985476090">
+    <state width="1320" height="173" key="GridCell.Tab.0.center/0.30.1366.738@0.30.1366.738" timestamp="1592087223957" />
+    <state width="1320" height="173" key="GridCell.Tab.0.left" timestamp="1592087223956">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="173" key="GridCell.Tab.0.left/0.30.1366.738@0.30.1366.738" timestamp="1591985476090" />
-    <state width="1320" height="173" key="GridCell.Tab.0.right" timestamp="1591985476091">
+    <state width="1320" height="173" key="GridCell.Tab.0.left/0.30.1366.738@0.30.1366.738" timestamp="1592087223956" />
+    <state width="1320" height="173" key="GridCell.Tab.0.right" timestamp="1592087223957">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state width="1320" height="173" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1591985476091" />
+    <state width="1320" height="173" key="GridCell.Tab.0.right/0.30.1366.738@0.30.1366.738" timestamp="1592087223957" />
     <state width="1320" height="216" key="GridCell.Tab.1.bottom" timestamp="1591716962681">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
@@ -265,10 +273,10 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="187" y="34" width="992" height="733" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1591936611045" />
-    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1591980755120">
+    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1592021049264">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1591980755120" />
+    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1592021049264" />
     <state x="489" y="315" width="388" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591980390132">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
