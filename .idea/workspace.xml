@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ee2bc552-0f97-488e-a64b-d9aafb9a5748" name="Default Changelist" comment="স্টাফ আপডেট সমস্যা">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +145,7 @@
       <workItem from="1592023351353" duration="209000" />
       <workItem from="1592061598788" duration="704000" />
       <workItem from="1592084771563" duration="2037000" />
+      <workItem from="1592215813160" duration="843000" />
     </task>
     <task id="LOCAL-00001" summary="স্টাফ তৈরীতে সমস্যা">
       <created>1591979552235</created>
@@ -269,14 +268,14 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="489" y="94" width="377" height="613" key="RollbackChangesDialog/0.30.1366.738@0.30.1366.738" timestamp="1591980243173" />
-    <state x="187" y="34" width="992" height="733" key="SettingsEditor" timestamp="1591936611045">
+    <state x="187" y="34" width="992" height="733" key="SettingsEditor" timestamp="1592216252037">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="187" y="34" width="992" height="733" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1591936611045" />
-    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1592021049264">
+    <state x="187" y="34" width="992" height="733" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1592216252037" />
+    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1592216313396">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1592021049264" />
+    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1592216313396" />
     <state x="489" y="315" width="388" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591980390132">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
