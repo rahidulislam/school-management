@@ -1,32 +1,18 @@
 
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from accounts.models import CustomUser, Staff, Student
 
 
-class CreateUserForm(UserCreationForm):
-    address = forms.CharField()
-    profile_image = forms.ImageField()
-    class Meta:
-        model = CustomUser
-        fields = ('first_name', 'last_name', 'username', 'email', 'password1', 'password2' )
-
-class UpdateUserForm(UserChangeForm):
-    address = forms.CharField()
-    profile_image = forms.ImageField()
+class StaffAddForm(forms.ModelForm):
+    first_name = forms.CharField(max_length=100, required=True)
+    last_name = forms.CharField(max_length=100, required=True)
+    username = forms.CharField(max_length=100, required=True)
+    email = forms.EmailField(required=True)
+    password = forms.CharField(max_length=100, required=True)
 
     class Meta:
-        model = CustomUser
-        fields = ('first_name', 'last_name', 'username', 'email')
-
-
-
-
-
-
-
-
-
+        model = Staff
+        fields = ["first_name", "last_name", "username", "email", "password", "address", "profile_image"]
 
 
 class StaffUpdateForm(forms.ModelForm):
@@ -34,22 +20,18 @@ class StaffUpdateForm(forms.ModelForm):
     last_name = forms.CharField(max_length=100, required=True)
     username = forms.CharField(max_length=100, required=True)
     email = forms.EmailField(required=True)
-    password = forms.CharField(max_length=100, required=True)
-    address = forms.CharField(max_length=255, required=True)
-    profile_image = forms.ImageField(required=True)
+
 
     class Meta:
         model = Staff
-        fields = ("first_name", "last_name", "username", "email", "password", "address", "profile_image" )
+        fields = ("first_name", "last_name", "username", "email", "address", "profile_image" )
 
-class AddStudentForm(forms.ModelForm):
+class StudentAddForm(forms.ModelForm):
     first_name = forms.CharField( max_length=100, required=True)
     last_name = forms.CharField(max_length=100, required=True)
     username = forms.CharField(max_length=100, required=True)
     email = forms.EmailField(required=True)
     password = forms.CharField(max_length=100, required=True)
-
-
 
     class Meta:
         model = Student
@@ -63,9 +45,7 @@ class StudentUpdateForm(forms.ModelForm):
     email = forms.EmailField(required=True)
     password = forms.CharField(max_length=100, required=True)
 
-
-
     class Meta:
         model = Student
-        fields = ("first_name", "last_name", "username", "email", "password","gender", "address","course","session_start","session_end", "profile_image" )
+        fields = ("first_name", "last_name", "email", "password","gender", "address","course","session_start","session_end", "profile_image" )
 
