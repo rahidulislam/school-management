@@ -1,12 +1,12 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views.generic import TemplateView, FormView, CreateView, ListView, UpdateView
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
-from accounts.models import CustomUser, Staff
-from accounts.forms import AddStudentForm, StaffUpdateForm, CreateUserForm, UpdateUserForm
+from accounts.models import CustomUser, Staff, Student
+from accounts.forms import StaffUpdateForm, StudentAddForm, StudentUpdateForm, StaffAddForm
 from courses.models import Course
 
 class Home(LoginRequiredMixin, TemplateView):
@@ -45,17 +45,21 @@ class LogoutView(LoginRequiredMixin, FormView):
         return redirect('accounts:login')
 
 
-class AddStaff(LoginRequiredMixin, CreateView):
-    form_class = CreateUserForm
+class StaffAdd(LoginRequiredMixin, CreateView):
+    model = Staff
+    form_class = StaffAddForm
     template_name = "accounts/add_staff.html"
 
-    def post(self, request, *args, **kwargs):
-        form = self.form_class(data=request.POST, files=request.FILES)
+    def form_valid(self, form):
+        first_name = form.cleaned_data['first_name']
+        last_name = form.cleaned_data['last_name']
+        username = form.cleaned_data['username']
+        email = form.cleaned_data['email']
+        password = form.cleaned_data['password']
+        address = form.cleaned_data['address']
+        profile_image = form.cleaned_data['profile_image']
 
-        if form.is_valid():
-
-            address = form.cleaned_data['address']
-            profile_image = form.cleaned_data['profile_image']
+        try:
             user = form.save(commit=False)
             user.user_type = 2
             user.save()
@@ -65,11 +69,10 @@ class AddStaff(LoginRequiredMixin, CreateView):
             staff.save()
             messages.success(self.request, 'Successfully Staff Added', extra_tags='alert alert-success')
             return redirect('accounts:manage_staff')
-        else:
-            context ={
-                'form': self.form_class
-            }
-            return render(request, self.template_name, context)
+        except:
+            messages.error(self.request, 'Failed to add staff', extra_tags='alert alert-danger')
+
+
 
 
 class ManageStaff(LoginRequiredMixin, ListView):
@@ -80,36 +83,39 @@ class ManageStaff(LoginRequiredMixin, ListView):
 
 class StaffUpdate(LoginRequiredMixin, UpdateView):
     model = Staff
-    form_class = UpdateUserForm
+    form_class = StaffUpdateForm
     template_name = "accounts/staff_edit.html"
+    success_url = reverse_lazy('')
+    def get_initial(self):
+        initial = super(StaffUpdate, self).get_initial()
+        staff = get_object_or_404(Staff, pk=object.pk)
+        initial['first_name'] = staff.admin.first_name
+        initial['last_name'] = staff.admin.last_name
+        initial['username'] = staff.admin.username
+        initial['email'] = staff.admin.email
+        return initial
 
-    #queryset = Staff.objects.all()
-    def get_object(self, queryset=None):
-        if queryset is None:
-            queryset = self.get_queryset()
-        return get_object_or_404(queryset, pk=self.kwargs['pk'])
 
 
-class AddStudent(LoginRequiredMixin, FormView):
-    form_class = AddStudentForm
+class StudentAdd(LoginRequiredMixin, CreateView):
+    model = Student
+    form_class = StudentAddForm
     template_name = "accounts/add_student.html"
 
-    def post(self, request, *args, **kwargs):
-        form = self.form_class(data=request.POST, files=request.FILES)
+    def form_valid(self, form):
+        first_name = form.cleaned_data['first_name']
+        last_name = form.cleaned_data['last_name']
+        username = form.cleaned_data['username']
+        email = form.cleaned_data['email']
+        password = form.cleaned_data['password']
+        gender = form.cleaned_data['gender']
+        address = form.cleaned_data['address']
+        course = form.cleaned_data['course']
+        session_start = form.cleaned_data['session_start']
+        session_end = form.cleaned_data['session_end']
+        profile_image = form.cleaned_data['profile_image']
 
-        if form.is_valid():
-            first_name = form.cleaned_data['first_name']
-            last_name = form.cleaned_data['last_name']
-            username = form.cleaned_data['username']
-            email = form.cleaned_data['email']
-            password = form.cleaned_data['password']
-            gender = form.cleaned_data['gender']
-            address = form.cleaned_data['address']
-            course = form.cleaned_data['course']
-            session_start = form.cleaned_data['session_start']
-            session_end = form.cleaned_data['session_end']
-            profile_image = form.cleaned_data['profile_image']
-
+        try:
             user = CustomUser.objects.create_user(
                 username=username,
                 email=email,
@@ -120,19 +126,38 @@ class AddStudent(LoginRequiredMixin, FormView):
             )
             user.student.gender = gender
             course_obj = Course.objects.get(course_name=course)
-            user.student.course=course_obj
+            user.student.course = course_obj
             user.student.address = address
             user.student.session_start = session_start
             user.student.session_end = session_end
             user.student.profile_image = profile_image
             user.save()
             print(user)
-            messages.success(request, 'Successfully Added', extra_tags='alert alert-success')
+            messages.success(self.request, 'Successfully Added', extra_tags='alert alert-success')
             return redirect(reverse('accounts:add_student'))
 
-        else:
-            messages.error(request, 'Failed to add student', extra_tags='alert alert-danger')
-            context = {
-                'form': self.form_class
-            }
-            return render(request, self.template_name, context)
+        except:
+            messages.error(self.request, 'Failed to Add Student', extra_tags='alert alert-danger')
+            return redirect(reverse('accounts:add_student'))
+
+class ManageStudent(LoginRequiredMixin, ListView):
+    model = Student
+    template_name = "accounts/manage_student.html"
+    context_object_name = 'student_list'
+
+class StudentUpdate(LoginRequiredMixin, UpdateView):
+    model = Student
+    form_class = StudentUpdateForm
+    template_name = "accounts/student_edit.html"
+
+    def get_initial(self):
+        initial = super(StaffUpdate, self).get_initial()
+        student = get_object_or_404(Student, pk=object.pk)
+        initial['first_name'] = student.admin.first_name
+        initial['last_name'] = student.admin.last_name
+        initial['username'] = student.admin.username
+        initial['email'] = student.admin.email
+        return initial
+
+
+

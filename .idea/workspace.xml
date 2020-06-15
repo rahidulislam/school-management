@@ -19,9 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee2bc552-0f97-488e-a64b-d9aafb9a5748" name="Default Changelist" comment="স্টুডেন্ট আপডেট সমস্যা সমাধান করা হয়েছে।">
+    <list default="true" id="ee2bc552-0f97-488e-a64b-d9aafb9a5748" name="Default Changelist" comment="Staffform Studentform add and update issue fixed">
+      <change afterPath="$PROJECT_DIR$/templates/accounts/manage_student.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/accounts/student_edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +148,7 @@
       <workItem from="1592023351353" duration="209000" />
       <workItem from="1592061598788" duration="704000" />
       <workItem from="1592084771563" duration="2037000" />
-      <workItem from="1592215813160" duration="2011000" />
+      <workItem from="1592215813160" duration="3576000" />
     </task>
     <task id="LOCAL-00001" summary="স্টাফ তৈরীতে সমস্যা">
       <created>1591979552235</created>
@@ -190,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592217226126</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Staffform Studentform add and update issue fixed">
+      <created>1592218167604</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1592218167604</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +223,8 @@
     <MESSAGE value="স্টাফ আপডেট সমস্যা" />
     <MESSAGE value="স্টাফ আপডেট সমস্যা সমাধান করা হয়েছে।" />
     <MESSAGE value="স্টুডেন্ট আপডেট সমস্যা সমাধান করা হয়েছে।" />
-    <option name="LAST_COMMIT_MESSAGE" value="স্টুডেন্ট আপডেট সমস্যা সমাধান করা হয়েছে।" />
+    <MESSAGE value="Staffform Studentform add and update issue fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Staffform Studentform add and update issue fixed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="389" y="30" width="578" height="738" key="#SMS" timestamp="1591715780149">
