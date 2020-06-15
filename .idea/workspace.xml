@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee2bc552-0f97-488e-a64b-d9aafb9a5748" name="Default Changelist" comment="স্টাফ আপডেট সমস্যা">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ee2bc552-0f97-488e-a64b-d9aafb9a5748" name="Default Changelist" comment="স্টাফ আপডেট সমস্যা সমাধান করা হয়েছে।" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -145,7 +143,7 @@
       <workItem from="1592023351353" duration="209000" />
       <workItem from="1592061598788" duration="704000" />
       <workItem from="1592084771563" duration="2037000" />
-      <workItem from="1592215813160" duration="843000" />
+      <workItem from="1592215813160" duration="1144000" />
     </task>
     <task id="LOCAL-00001" summary="স্টাফ তৈরীতে সমস্যা">
       <created>1591979552235</created>
@@ -175,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592021019206</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="স্টাফ আপডেট সমস্যা সমাধান করা হয়েছে।">
+      <created>1592216935002</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1592216935003</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +202,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="স্টাফ তৈরীতে সমস্যা" />
     <MESSAGE value="স্টাফ আপডেট সমস্যা" />
-    <option name="LAST_COMMIT_MESSAGE" value="স্টাফ আপডেট সমস্যা" />
+    <MESSAGE value="স্টাফ আপডেট সমস্যা সমাধান করা হয়েছে।" />
+    <MESSAGE value="স্টুডেন্ট আপডেট সমস্যা সমাধান করা হয়েছে।" />
+    <option name="LAST_COMMIT_MESSAGE" value="স্টুডেন্ট আপডেট সমস্যা সমাধান করা হয়েছে।" />
   </component>
   <component name="WindowStateProjectService">
     <state x="389" y="30" width="578" height="738" key="#SMS" timestamp="1591715780149">
@@ -272,14 +279,14 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="187" y="34" width="992" height="733" key="SettingsEditor/0.30.1366.738@0.30.1366.738" timestamp="1592216252037" />
-    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1592216313396">
+    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2" timestamp="1592217030394">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1592216313396" />
-    <state x="489" y="315" width="388" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591980390132">
+    <state x="278" y="135" width="800" height="531" key="Vcs.Push.Dialog.v2/0.30.1366.738@0.30.1366.738" timestamp="1592217030394" />
+    <state x="489" y="315" width="388" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592216974643">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="489" y="315" width="388" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1366.738@0.30.1366.738" timestamp="1591980390132" />
+    <state x="489" y="315" width="388" height="171" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.30.1366.738@0.30.1366.738" timestamp="1592216974643" />
     <state x="422" y="189" width="521" height="423" key="git4idea.merge.GitPullDialog" timestamp="1591984314249">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
