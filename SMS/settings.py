@@ -130,3 +130,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 AUTH_USER_MODEL = 'accounts.CustomUser'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 AUTHENTICATION_BACKENDS = ['accounts.EmailBackEnd.EmailBackEnd']
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
