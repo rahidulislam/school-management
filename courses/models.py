@@ -20,7 +20,7 @@ class Subject(models.Model):
 
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     subject_name = models.CharField(max_length=255)
-    staff = models.ForeignKey('accounts.Staff', on_delete=models.CASCADE)
+    # staff = models.ForeignKey('accounts.Staff', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

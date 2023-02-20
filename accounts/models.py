@@ -3,69 +3,55 @@ from django.contrib.auth.models import AbstractUser
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+from accounts.managers import UserManager
 from courses.models import Course
 
+from django.contrib.auth.models import AbstractUser
+from django.db import models
 
-class CustomUser(AbstractUser):
-    USER_TYPE = (
-        (1, 'HOD'),
-        (2, 'Staff'),
-        (3, 'Student'),
+
+
+# Create your models here.
+
+
+class User(AbstractUser):
+    ADMIN = 1
+    TEACHER = 2
+    STUDENT = 3
+
+    ROLE_CHOICES = (
+        (ADMIN, 'Admin'),
+        (TEACHER, 'Teacher'),
+        (STUDENT, 'Student'),
+
     )
-    user_type = models.CharField(max_length=50, choices=USER_TYPE, default=1)
 
+    username = None
+    email = models.EmailField(unique=True)
+    role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, blank=True, null=True)
 
-class AdminHOD(models.Model):
-    admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name="admin")
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
 
-
-class Staff(models.Model):
-    admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='staff')
-    profile_image = models.ImageField(upload_to='profile_pic/')
-    address = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    objects = UserManager()
 
     def __str__(self):
-        return self.admin.get_full_name()
+        return self.email
 
 
-class Student(models.Model):
-    GENDER_TYPE = (
-        ('male', 'Male'),
-        ('female', 'Female'),
-    )
-    admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name="student")
-    gender = models.CharField(choices=GENDER_TYPE, max_length=10, default='male')
-    profile_image = models.ImageField(upload_to='profile_pic/')
+class Profile(models.Model):
+    user = models.OneToOneField(
+        User, on_delete=models.CASCADE, related_name='profile')
+
+    mobile = models.CharField(max_length=20)
     address = models.TextField()
-    course = models.ForeignKey(Course, on_delete=models.CASCADE,blank=True, null=True)
-    session_start = models.DateField(null=True)
-    session_end = models.DateField(null=True)
+    profile_image = models.ImageField(upload_to="profile/", blank=True)
+
+    def __str__(self):
+        return self.user.email
 
 
 
-@receiver(post_save, sender=CustomUser)
-def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-        if instance.user_type == 1:
-            AdminHOD.objects.create(admin=instance)
 
-        if instance.user_type == 2:
-            Staff.objects.create(admin=instance)
 
-        if instance.user_type == 3:
-            Student.objects.create(admin=instance)
-    
-@receiver(post_save, sender=CustomUser)
-def save_user_profile(sender, instance, **kwargs):
-    if instance.user_type == 1:
-        instance.admin.save()
 
-    if instance.user_type == 2:
-        instance.staff.save()
-
-    if instance.user_type == 3:
-        instance.student.save()
